@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spendmate.com</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
+  <div class="container">
+    <div class="left-panel">
+      <h2>Transaction</h2>
+      <input type="number" id="amount" class="amount" placeholder="$ 0.00" step="0.01" />
+      
+      <input type="date" id="date" class="date" />
+      
+      <div class="toggle-buttons">
+        <button class="toggle" id="expenseBtn">🔻 Expense</button>
+        <button class="toggle" id="incomeBtn">🔼 Income</button>
+        <button class="toggle" id="currentBtn">😊 Current</button>
+      </div>
+      
+      <textarea id="note" placeholder="Add description..."></textarea>
+      
+      <button id="addBtn" class="add-button">Add Transaction</button>
+    </div>
 
-    <main>
-        <div class="container">
+    <div class="calendar-panel">
+      <div class="greeting">
+        <h2>Hello, User’s name</h2>
+        <div id="time"></div>
+      </div>
 
-            <div class="transactions">
-                <strong>Transaction</strong>
-                <h1>$ 23.56</h1>
+      <input type="date" id="calendarDate" class="calendar" />
+    </div>
 
-                <div class="date">
-                    
-                </div>
-            </div>
+    <div class="right-panel">
+      <div class="tabs">
+        <button id="expenseTab" class="tab active">🔻 Expense</button>
+        <button id="incomeTab" class="tab">🔼 Income</button>
+      </div>
+      <div id="transactionList" class="transactions"></div>
+    </div>
+  </div>
 
-            <div class="calendar">
-
-            </div>
-
-            <div class="info">
-
-            </div>
-
-        </div>
-    </main>
-
+  <script src="script.js"></script>
 </body>
 </html>

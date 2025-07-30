@@ -1,10 +1,146 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #033d33, #4c837b);
+  min-height: 100vh;
+  color: #000;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  padding: 2rem;
+  gap: 2rem;
 }
+
+.left-panel, .right-panel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-panel {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.date {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  flex: 1;
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  background: #ddd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: #000;
+  color: #fff;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.add-button {
+  width: 100%;
+  padding: 1rem;
+  background: #1c1c1c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.greeting h2 {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+#time {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.calendar {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: #ddd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1c1c1c;
+  color: white;
+}
+
+.transactions {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: auto;
+}
+
 
